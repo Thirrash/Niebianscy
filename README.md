@@ -1,3 +1,0 @@
-# Niebianscy
-
-Test Slack
