@@ -4,6 +4,6 @@
 *.csproj
 *.pidb
 *.sln 
-Temp/*
-Library/*
-Build/*
+UnityProject/Temp/*
+UnityProject/Library/*
+UnityProject/Build/*
