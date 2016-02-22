@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: 723c13cd9b598404493f0b26dc048d44
+timeCreated: 1456143640
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Beard
+    100002: Belt
+    100004: Bone003
+    100006: Bone013
+    100008: Bone017
+    100010: Cylinder002
+    100012: Cylinder003
+    100014: Dzida Top
+    100016: Head
+    100018: HeadBone
+    100020: Helmet
+    100022: LeftArm
+    100024: LeftHandBone
+    100026: LeftLeg
+    100028: LeftShoeBone
+    100030: LeftSkirtBone
+    100032: //RootNode
+    100034: LowerLeftArmBone
+    100036: LowerLeftLegBone
+    100038: LowerRightArmBone
+    100040: LowerRightLegBone
+    100042: RightArm
+    100044: RightHandBone
+    100046: RightLeg
+    100048: RightShoeBone
+    100050: RightSkirtBone
+    100052: ShieldBone
+    100054: Shirt1
+    100056: ShoeLeft
+    100058: ShoeRight
+    100060: Skirt
+    100062: SpearBone
+    100064: Tarcza
+    100066: TorsoBone
+    100068: UpperLeftArmBone
+    100070: UpperLeftLegBone
+    100072: UpperRightArmBone
+    100074: UpperRIghtLegBone
+    100076: WaistBone
+    100078: Zdobienie Polkula
+    400000: Beard
+    400002: Belt
+    400004: Bone003
+    400006: Bone013
+    400008: Bone017
+    400010: Cylinder002
+    400012: Cylinder003
+    400014: Dzida Top
+    400016: Head
+    400018: HeadBone
+    400020: Helmet
+    400022: LeftArm
+    400024: LeftHandBone
+    400026: LeftLeg
+    400028: LeftShoeBone
+    400030: LeftSkirtBone
+    400032: //RootNode
+    400034: LowerLeftArmBone
+    400036: LowerLeftLegBone
+    400038: LowerRightArmBone
+    400040: LowerRightLegBone
+    400042: RightArm
+    400044: RightHandBone
+    400046: RightLeg
+    400048: RightShoeBone
+    400050: RightSkirtBone
+    400052: ShieldBone
+    400054: Shirt1
+    400056: ShoeLeft
+    400058: ShoeRight
+    400060: Skirt
+    400062: SpearBone
+    400064: Tarcza
+    400066: TorsoBone
+    400068: UpperLeftArmBone
+    400070: UpperLeftLegBone
+    400072: UpperRightArmBone
+    400074: UpperRIghtLegBone
+    400076: WaistBone
+    400078: Zdobienie Polkula
+    4300000: Dzida Top
+    4300002: Tarcza
+    4300004: Zdobienie Polkula
+    4300006: Head
+    4300008: Belt
+    4300010: Helmet
+    4300012: RightLeg
+    4300014: Beard
+    4300016: Skirt
+    4300018: RightArm
+    4300020: Shirt1
+    4300022: ShoeLeft
+    4300024: Cylinder002
+    4300026: LeftArm
+    4300028: Cylinder003
+    4300030: LeftLeg
+    4300032: ShoeRight
+    7400000: StandStill
+    7400002: Attack
+    9500000: //RootNode
+    13700000: Beard
+    13700002: Belt
+    13700004: Cylinder002
+    13700006: Cylinder003
+    13700008: Dzida Top
+    13700010: Head
+    13700012: Helmet
+    13700014: LeftArm
+    13700016: LeftLeg
+    13700018: RightArm
+    13700020: RightLeg
+    13700022: Shirt1
+    13700024: ShoeLeft
+    13700026: ShoeRight
+    13700028: Skirt
+    13700030: Tarcza
+    13700032: Zdobienie Polkula
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: StandStill
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 129
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Beard
+        weight: 1
+      - path: Belt
+        weight: 1
+      - path: Cylinder002
+        weight: 1
+      - path: Cylinder003
+        weight: 1
+      - path: Dzida Top
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: HeadBone
+        weight: 1
+      - path: HeadBone/TorsoBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/LeftSkirtBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/LeftSkirtBone/UpperLeftLegBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/LeftSkirtBone/UpperLeftLegBone/LowerLeftLegBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/LeftSkirtBone/UpperLeftLegBone/LowerLeftLegBone/LeftShoeBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/RightSkirtBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/RightSkirtBone/UpperRIghtLegBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/RightSkirtBone/UpperRIghtLegBone/LowerRightLegBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/RightSkirtBone/UpperRIghtLegBone/LowerRightLegBone/RightShoeBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone013
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone013/UpperRightArmBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone013/UpperRightArmBone/LowerRightArmBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone013/UpperRightArmBone/LowerRightArmBone/RightHandBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone017
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone017/UpperLeftArmBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone017/UpperLeftArmBone/LowerLeftArmBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone017/UpperLeftArmBone/LowerLeftArmBone/LeftHandBone
+        weight: 1
+      - path: Helmet
+        weight: 1
+      - path: LeftArm
+        weight: 1
+      - path: LeftLeg
+        weight: 1
+      - path: RightArm
+        weight: 1
+      - path: RightLeg
+        weight: 1
+      - path: ShieldBone
+        weight: 1
+      - path: Shirt1
+        weight: 1
+      - path: ShoeLeft
+        weight: 1
+      - path: ShoeRight
+        weight: 1
+      - path: Skirt
+        weight: 1
+      - path: SpearBone
+        weight: 1
+      - path: Tarcza
+        weight: 1
+      - path: Zdobienie Polkula
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: 130
+      lastFrame: 173
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Beard
+        weight: 1
+      - path: Belt
+        weight: 1
+      - path: Cylinder002
+        weight: 1
+      - path: Cylinder003
+        weight: 1
+      - path: Dzida Top
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: HeadBone
+        weight: 1
+      - path: HeadBone/TorsoBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/LeftSkirtBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/LeftSkirtBone/UpperLeftLegBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/LeftSkirtBone/UpperLeftLegBone/LowerLeftLegBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/LeftSkirtBone/UpperLeftLegBone/LowerLeftLegBone/LeftShoeBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/RightSkirtBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/RightSkirtBone/UpperRIghtLegBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/RightSkirtBone/UpperRIghtLegBone/LowerRightLegBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone003/WaistBone/RightSkirtBone/UpperRIghtLegBone/LowerRightLegBone/RightShoeBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone013
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone013/UpperRightArmBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone013/UpperRightArmBone/LowerRightArmBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone013/UpperRightArmBone/LowerRightArmBone/RightHandBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone017
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone017/UpperLeftArmBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone017/UpperLeftArmBone/LowerLeftArmBone
+        weight: 1
+      - path: HeadBone/TorsoBone/Bone017/UpperLeftArmBone/LowerLeftArmBone/LeftHandBone
+        weight: 1
+      - path: Helmet
+        weight: 1
+      - path: LeftArm
+        weight: 1
+      - path: LeftLeg
+        weight: 1
+      - path: RightArm
+        weight: 1
+      - path: RightLeg
+        weight: 1
+      - path: ShieldBone
+        weight: 1
+      - path: Shirt1
+        weight: 1
+      - path: ShoeLeft
+        weight: 1
+      - path: ShoeRight
+        weight: 1
+      - path: Skirt
+        weight: 1
+      - path: SpearBone
+        weight: 1
+      - path: Tarcza
+        weight: 1
+      - path: Zdobienie Polkula
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
