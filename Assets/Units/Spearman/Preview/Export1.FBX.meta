@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 22a8a9cb6cd4ff348aa6cc391d60539a
-timeCreated: 1458409161
+guid: 6389465d5c4df764c882bc5ca510d801
+timeCreated: 1458422847
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -24,7 +24,7 @@ ModelImporter:
     100032: Shirt1
     100034: ShoeLeft
     100036: ShoeLeft001
-    100038: Skirt001
+    100038: Skirt
     100040: Tarcza
     100042: Zdobienie Polkula
     100044: Zdobienie Polkula001
@@ -54,7 +54,7 @@ ModelImporter:
     400032: Shirt1
     400034: ShoeLeft
     400036: ShoeLeft001
-    400038: Skirt001
+    400038: Skirt
     400040: Tarcza
     400042: Zdobienie Polkula
     400044: Zdobienie Polkula001
@@ -83,7 +83,7 @@ ModelImporter:
     2300030: Shirt1
     2300032: ShoeLeft
     2300034: ShoeLeft001
-    2300036: Skirt001
+    2300036: Skirt
     2300038: Tarcza
     2300040: Zdobienie Polkula
     2300042: Zdobienie Polkula001
@@ -112,7 +112,7 @@ ModelImporter:
     3300030: Shirt1
     3300032: ShoeLeft
     3300034: ShoeLeft001
-    3300036: Skirt001
+    3300036: Skirt
     3300038: Tarcza
     3300040: Zdobienie Polkula
     3300042: Zdobienie Polkula001
@@ -150,8 +150,8 @@ ModelImporter:
     4300048: ShoeLeft001
     4300050: Cylinder001
     4300052: LeftEyelid001
-    4300054: Skirt001
-    4300056: RightLeg
+    4300054: RightLeg
+    4300056: Skirt
   materials:
     importMaterials: 1
     materialName: 0
