@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: 6a160503bf7566141bb056f0b32a33b7
+timeCreated: 1461593101
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Belt
+    100004: Bow
+    100006: Bow_String
+    100008: Head
+    100010: LeftArm
+    100012: LeftEye
+    100014: LeftEyelid
+    100016: LeftLeg
+    100018: RightArm
+    100020: RightEye
+    100022: RightEyelid
+    100024: RightLeg
+    100026: Shirt
+    100028: ShoeLeft
+    100030: ShoeLeft001
+    100032: Skirt
+    100034: Stripe
+    100036: Sword_Hilt
+    100038: Sword_Sheath
+    400000: //RootNode
+    400002: Belt
+    400004: Bow
+    400006: Bow_String
+    400008: Head
+    400010: LeftArm
+    400012: LeftEye
+    400014: LeftEyelid
+    400016: LeftLeg
+    400018: RightArm
+    400020: RightEye
+    400022: RightEyelid
+    400024: RightLeg
+    400026: Shirt
+    400028: ShoeLeft
+    400030: ShoeLeft001
+    400032: Skirt
+    400034: Stripe
+    400036: Sword_Hilt
+    400038: Sword_Sheath
+    2300000: Belt
+    2300002: Bow
+    2300004: Bow_String
+    2300006: Head
+    2300008: LeftArm
+    2300010: LeftEye
+    2300012: LeftEyelid
+    2300014: LeftLeg
+    2300016: RightArm
+    2300018: RightEye
+    2300020: RightEyelid
+    2300022: RightLeg
+    2300024: Shirt
+    2300026: ShoeLeft
+    2300028: ShoeLeft001
+    2300030: Skirt
+    2300032: Stripe
+    2300034: Sword_Hilt
+    2300036: Sword_Sheath
+    3300000: Belt
+    3300002: Bow
+    3300004: Bow_String
+    3300006: Head
+    3300008: LeftArm
+    3300010: LeftEye
+    3300012: LeftEyelid
+    3300014: LeftLeg
+    3300016: RightArm
+    3300018: RightEye
+    3300020: RightEyelid
+    3300022: RightLeg
+    3300024: Shirt
+    3300026: ShoeLeft
+    3300028: ShoeLeft001
+    3300030: Skirt
+    3300032: Stripe
+    3300034: Sword_Hilt
+    3300036: Sword_Sheath
+    4300000: Head
+    4300002: Belt
+    4300004: LeftEye
+    4300006: LeftEyelid
+    4300008: RightEye
+    4300010: RightLeg
+    4300012: Skirt
+    4300014: LeftArm
+    4300016: Shirt
+    4300018: LeftLeg
+    4300020: ShoeLeft
+    4300022: ShoeLeft001
+    4300024: RightArm
+    4300026: RightEyelid
+    4300028: Stripe
+    4300030: Sword_Sheath
+    4300032: Sword_Hilt
+    4300034: Bow
+    4300036: Bow_String
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
