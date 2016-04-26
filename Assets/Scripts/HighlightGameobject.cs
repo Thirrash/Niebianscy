@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class HighlightGameobject : MonoBehaviour 
 {
+	public Canvas canvas;
+	private Text text;
 	public Camera MainCamera;
 	public GameObject ClickedObject, ClickedParentObject;
 	private GameObject HighlightedObject, HighlightedTemp, HighlightedParentObject;
@@ -12,10 +15,14 @@ public class HighlightGameobject : MonoBehaviour
 	private Ray ray;
 	private RaycastHit hit;
 	private bool isMaterialChanged;
+	private UnitStats stats;
+	private string statText;
 
 	void Start() 
 	{
+		canvas.enabled = false;
 		isMaterialChanged = false;
+		text = canvas.transform.FindChild("Text").GetComponent<Text>();
 	}
 
 	void Update()
@@ -46,11 +53,27 @@ public class HighlightGameobject : MonoBehaviour
 			HighlightedTemp = HighlightedObject;
 		}
 
+		if (HighlightedObject.tag == "Unit") 
+		{
+			stats = HighlightedObject.GetComponent<UnitStats> ();
+			if (Input.GetMouseButtonDown(1)) 
+			{
+				statText = "Type: " + stats.UnitType + "\nHP: " + stats.CurrentHP + "/20";
+				statText += "\nAttack: " + stats.Attack + "\nDefense: " + stats.Defense;
+				statText += "\nSpeed: " + stats.Speed + "\nRange: " + stats.Range;
+				text.text = statText;
+				canvas.enabled = true;
+			}
+		}
+
+		if (canvas.enabled && Input.GetMouseButtonUp(1))	canvas.enabled = false;
+
 		if (Input.GetMouseButtonDown (0)) 
 		{
 			ClickedObject = HighlightedObject;
 			ClickedParentObject = HighlightedParentObject;
 			Debug.Log ("Click! " + ClickedObject);
 		}
+
 	}
 }

@@ -27,38 +27,40 @@ public class UnitStats : MonoBehaviour
 
 	void Start()
 	{
-		Attack = AttPerHP * CurrentHP + AttBonus;
-		Defense = DefPerHP * CurrentHP + DefBonus;
-		Speed = BaseSpeed + SpeedBonus;
-
 		switch(UnitType)
 		{
-			case ("Spearman"):
-				AttPerHP = 3.0;
-				DefPerHP = 3.0;
-				BaseSpeed = 3;
-				Range = 1.0;
-				break;
+		case ("Spearman"):
+			AttPerHP = 3.0;
+			DefPerHP = 3.0;
+			BaseSpeed = 3;
+			Range = 1.0;
+			break;
 
-			case ("Heavy"):
-				AttPerHP = 3.0;
-				DefPerHP = 6.0;
-				BaseSpeed = 3;
-				Range = 1.0;
-				break;
+		case ("Heavy"):
+			AttPerHP = 3.0;
+			DefPerHP = 6.0;
+			BaseSpeed = 3;
+			Range = 1.0;
+			break;
 
-			case ("Archer"):
-				AttPerHP = 5.0;
-				DefPerHP = 3.0;
-				BaseSpeed = 3;
-				Range = 3.0;
-				break;
+		case ("Archer"):
+			AttPerHP = 5.0;
+			DefPerHP = 3.0;
+			BaseSpeed = 3;
+			Range = 3.0;
+			break;
 
 		default:
 			Debug.Log ("Invalid Unit Type, check if given names are correct or unit name is assigned");
 			break;
 		}
-			
+	}
+
+	void Update()
+	{
+		Attack = AttPerHP * CurrentHP + AttBonus;
+		Defense = DefPerHP * CurrentHP + DefBonus;
+		Speed = BaseSpeed + SpeedBonus;
 	}
 		
 }
