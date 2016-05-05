@@ -7,8 +7,7 @@ public class HighlightGameobject : MonoBehaviour
 	public Canvas canvas;
 	private Text text;
 	public Camera MainCamera;
-	public GameObject ClickedObject, ClickedParentObject;
-	private GameObject HighlightedObject, HighlightedTemp, HighlightedParentObject;
+	public GameObject HighlightedObject, HighlightedTemp, HighlightedParentObject;
 	private Material ObjectMat;
 	private Color tempColor;
 	private Renderer rend;
@@ -47,7 +46,7 @@ public class HighlightGameobject : MonoBehaviour
 				rend = HighlightedObject.GetComponent<Renderer>();
 				ObjectMat = rend.material;
 				tempColor = ObjectMat.color;
-				ObjectMat.color = Color.red;
+				ObjectMat.color = new Color(0.9f,0.9f,0.0f,0.0f);
 			}
 
 			HighlightedTemp = HighlightedObject;
@@ -68,12 +67,7 @@ public class HighlightGameobject : MonoBehaviour
 
 		if (canvas.enabled && Input.GetMouseButtonUp(1))	canvas.enabled = false;
 
-		if (Input.GetMouseButtonDown (0)) 
-		{
-			ClickedObject = HighlightedObject;
-			ClickedParentObject = HighlightedParentObject;
-			Debug.Log ("Click! " + ClickedObject);
-		}
+
 
 	}
 }

@@ -6,6 +6,9 @@ public class UnitStats : MonoBehaviour
 	//whole script is just a data container to store each unit's statistics;
 	//variables are public for them to be editable by other scripts
 	public string UnitType;
+	//current hex position
+	public int CurrentRow;
+	public int CurrentCol;
 	//Every unit in the game will have 20 HP at start
 	public const double MaxHP = 20.0;
 	public double CurrentHP = 20.0;
@@ -29,30 +32,37 @@ public class UnitStats : MonoBehaviour
 	{
 		switch(UnitType)
 		{
-		case ("Spearman"):
-			AttPerHP = 3.0;
-			DefPerHP = 3.0;
-			BaseSpeed = 3;
-			Range = 1.0;
-			break;
+			case ("Spearman"):
+				AttPerHP = 3.0;
+				DefPerHP = 3.0;
+				BaseSpeed = 3;
+				Range = 1.0;
+				break;
 
-		case ("Heavy"):
-			AttPerHP = 3.0;
-			DefPerHP = 6.0;
-			BaseSpeed = 3;
-			Range = 1.0;
-			break;
+			case ("Heavy"):
+				AttPerHP = 3.0;
+				DefPerHP = 6.0;
+				BaseSpeed = 3;
+				Range = 1.0;
+				break;
 
-		case ("Archer"):
-			AttPerHP = 5.0;
-			DefPerHP = 3.0;
-			BaseSpeed = 3;
-			Range = 3.0;
-			break;
+			case ("Archer"):
+				AttPerHP = 5.0;
+				DefPerHP = 3.0;
+				BaseSpeed = 3;
+				Range = 3.0;
+				break;
 
-		default:
-			Debug.Log ("Invalid Unit Type, check if given names are correct or unit name is assigned");
-			break;
+			case ("Lizard"):
+				AttPerHP = 5.0;
+				DefPerHP = 3.0;
+				BaseSpeed = 5;
+				Range = 1.0;
+				break;
+
+			default:
+				Debug.Log ("Invalid Unit Type, check if given names are correct or unit name is assigned");
+				break;
 		}
 	}
 

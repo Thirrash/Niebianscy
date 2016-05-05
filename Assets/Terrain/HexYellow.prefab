@@ -11,9 +11,9 @@ GameObject:
   - 33: {fileID: 3375140}
   - 23: {fileID: 2358332}
   - 64: {fileID: 6424474}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HexYellow
-  m_TagString: Untagged
+  m_TagString: Hex
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

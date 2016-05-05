@@ -6030,7 +6030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe60ffccfcef8346b33c8c151306227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitType: Spear
+  UnitType: Spearman
   CurrentHP: 20
   AttBonus: 0
   DefBonus: 0
