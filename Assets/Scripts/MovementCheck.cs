@@ -26,7 +26,7 @@ public class MovementCheck : MonoBehaviour
 		TrueHexesLength = 0;
 
 		Units = GameObject.FindGameObjectsWithTag ("Unit");
-		//Obstacles = GameObject.FindGameObjectsWithTag ("Obstacle");
+		Obstacles = GameObject.FindGameObjectsWithTag ("Obstacle");
 	}
 
 	void Update () 
@@ -60,7 +60,13 @@ public class MovementCheck : MonoBehaviour
 
 					for (int j = 0; j < Units.Length; j++) 
 					{
-						if (AvailableHex[i].gameObject.Equals (Units[j].GetComponent<UnitStats>().HexPos))
+						if (AvailableHex [i].gameObject.Equals (Units [j].GetComponent<UnitStats> ().HexPos))
+							isTaken = true;
+					}
+
+					for (int j = 0; j < Obstacles.Length; j++)
+					{
+						if (AvailableHex [i].gameObject.Equals (Obstacles [j].GetComponent<ObstacleInfo> ().HexPos))
 							isTaken = true;
 					}
 
@@ -73,7 +79,7 @@ public class MovementCheck : MonoBehaviour
 
 				//highlight hexes
 				ChangeMat (0.9f,0.9f,0.0f);
-				Debug.Log ("Number of available hexes: " + AvailableHex.Length);
+				Debug.Log ("Number of available hexes: " + TrueHexesLength);
 			}
 			else 
 			{
