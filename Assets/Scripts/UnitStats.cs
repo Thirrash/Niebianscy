@@ -7,8 +7,7 @@ public class UnitStats : MonoBehaviour
 	//variables are public for them to be editable by other scripts
 	public string UnitType;
 	//current hex position
-	public int CurrentRow;
-	public int CurrentCol;
+	public GameObject HexPos;
 	//Every unit in the game will have 20 HP at start
 	public const double MaxHP = 20.0;
 	public double CurrentHP = 20.0;
