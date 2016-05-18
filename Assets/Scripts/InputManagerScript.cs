@@ -11,12 +11,12 @@ using System.Collections;
 public class InputManagerScript : MonoBehaviour {
     BattlefieldCameraScript cameraMan;
     UnitManagerScript unitMan;
-	// Use this for initialization
+
 	void Start () {
         unitMan = GetComponent<UnitManagerScript>();
+		cameraMan = GameObject.Find ("Battlefield Camera").GetComponent<BattlefieldCameraScript> ();
     }
-	
-	// Update is called once per frame
+
 	void Update () {
 	    if(Input.GetMouseButtonUp(0))
         {
@@ -31,5 +31,15 @@ public class InputManagerScript : MonoBehaviour {
         }
         if (Input.GetKeyUp("space"))
             unitMan.Move();
+
+		//camera input
+		float moveX = Input.GetAxis ("Horizontal");
+		float moveY = Input.GetAxis ("Mouse ScrollWheel");
+		float moveZ = Input.GetAxis ("Vertical");
+		float rotation = Input.GetAxis ("Rotational");
+		if (moveX != 0f || moveY != 0f || moveZ != 0f)
+			cameraMan.Move (moveX, moveY, moveZ);
+		if (rotation != 0f)
+			cameraMan.Rotate (rotation);
 	}
 }
