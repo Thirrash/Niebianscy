@@ -7,6 +7,12 @@ using System.Collections;
     appropriate functions with needed data in them,
     depending on user actions.
 
+    Current usage:
+    wsad, qe, arrows - camera movements
+    left click - select unit or tile
+    space - move (if selected unit is allied and selected tile in range)
+    enter - next turn
+
 ***************************************************************/
 public class InputManagerScript : MonoBehaviour {
     BattlefieldCameraScript cameraMan;
@@ -41,5 +47,13 @@ public class InputManagerScript : MonoBehaviour {
 			cameraMan.Move (moveX, moveY, moveZ);
 		if (rotation != 0f)
 			cameraMan.Rotate (rotation);
-	}
+
+        if (Input.GetKeyUp("escape"))
+            unitMan.Deselect();
+        if (Input.GetKeyUp("return"))
+        {
+            unitMan.EndTurn();
+            Debug.Log("New turn started! Resources refreshed.");
+        }
+    }
 }

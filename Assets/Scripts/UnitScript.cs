@@ -3,35 +3,39 @@ using System.Collections;
 
 public class UnitScript : MonoBehaviour {
     // TO DO better collider (hexagonal) for units needed
-    // is reference to hexfield manager really needed?
-    HexfieldManagerScript Hexfield;
-    public int x, y, z;
+    public HexScript hex;
     public bool allied;
+    public int mobility; // remaining moves left, should refresh in each turn
 
-    // Use this for initialization
-    void Start () {
-        Hexfield = GameObject.Find("ManagerScripts").GetComponent<HexfieldManagerScript>();
-        allied = true;
-        Move(4, 4, -8);
-	}
-
-    public void Select()
+    public void Place(HexScript ihex, bool iallied)
     {
-        Hexfield.SelectHexRange(x, y, z, GetMoveRange());
+        if(hex != null)
+            hex.available = true;
+        hex = ihex;
+        hex.available = false;
+        allied = iallied;
+        transform.position = hex.GetPosition();
+        if (allied)
+            transform.FindChild("Cylinder").GetComponent<MeshRenderer>().material.color = Color.green;
+        else
+            transform.FindChild("Cylinder").GetComponent<MeshRenderer>().material.color = Color.red;
+        // just to refresh all the resources
+        EndTurn();
     }
 
-    public int GetMoveRange()
+    public void EndTurn()
     {
         //should call unit statistics script to get actual number
-        return 2;
+        mobility = 2;
+        return;
     }
 
-    public void Move(int ix, int iy, int iz)
+    public void Move(HexScript ihex)
     {
-        x = ix;
-        y = iy;
-        z = iz;
-        transform.position = Hexfield.GetHexPosition(x, y, z);
-        Hexfield.DeselectAll();
+        mobility -= hex.Distance(ihex);
+        hex.available = true;
+        ihex.available = false;
+        hex = ihex;
+        transform.position = hex.GetPosition();
     }
 }

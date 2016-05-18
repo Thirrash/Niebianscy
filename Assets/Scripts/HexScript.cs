@@ -1,5 +1,15 @@
 ﻿using UnityEngine;
 
+/***************************************************************
+    Script containing all the data and functionality
+    a single hexagon tile should have.
+    It holds terrain type, location and information
+    about avalability (legality to move) of a tile.
+    Some of those currently implemented functions
+    will probbably be scrapped after a propper
+    terrain will cover hexfield.
+
+***************************************************************/
 public enum TerrainType
 {
     Plains, Forest, Water
@@ -9,7 +19,7 @@ public class HexScript : MonoBehaviour
 {
     public int x, y, z;
     public TerrainType terrain;
-    public bool occupied;
+    public bool available;
 
     public void highlight(Color c)
     {
@@ -40,6 +50,16 @@ public class HexScript : MonoBehaviour
         y = row - (col - (col%2)) / 2;
         z = -x - y;
         terrain = ter;
-        occupied = false;
+        available = true;
+    }
+
+    public Vector3 GetPosition()
+    {
+        return transform.position;
+    }
+
+    public int Distance(HexScript hex)
+    {
+        return (Mathf.Abs(hex.x - x) + Mathf.Abs(hex.y - y) + Mathf.Abs(hex.z - z)) / 2;
     }
 }
