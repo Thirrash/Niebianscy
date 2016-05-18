@@ -12,12 +12,11 @@ using System.Collections;
 
 ***************************************************************/
 public class HexfieldManagerScript : MonoBehaviour {
-    public const uint vMax = 12;
-    public const uint wMax = 12;
+    public uint vMax = 12, wMax = 12;
     public GameObject prefab;
     private GameObject[,] hexfield;
 
-    void Start ()
+    void Awake ()
     {
         hexfield = new GameObject[vMax, wMax];
         for (int v = 0; v < vMax; v++)
@@ -29,7 +28,7 @@ public class HexfieldManagerScript : MonoBehaviour {
             }
         }
         DeselectAll();
-	}
+    }
 
     public void SelectHex(int x, int y, int z)
     {
@@ -39,23 +38,33 @@ public class HexfieldManagerScript : MonoBehaviour {
             return;
         if (v < 0 || w < 0)
             return;
-        hexfield[v, w].GetComponent<HexScript>().highlight(Color.cyan);
+        if(hexfield[v, w].GetComponent<HexScript>().available)
+            hexfield[v, w].GetComponent<HexScript>().highlight(Color.cyan);
     }
 
-    public void SelectHexRange(int x, int y, int z, int r)
+    public void SelectHexRange(HexScript hex, int r)
     {
-        DeselectAll();
         for (int dx = -r; dx <= r; dx++)
         {
             for(int dy = Mathf.Max(-r, -dx-r); dy <= Mathf.Min(r, -dx+r); dy++)
             {
                 int dz = -dx-dy;
-                SelectHex(x+dx, y+dy, z+dz);
+                SelectHex(hex.x+dx, hex.y +dy, hex.z +dz);
             }
         }
     }
 
-    // null exception here will be fixed when propper map initialization will be introduced
+    //should be better, but well...
+    public HexScript GetRandomEmptyHex()
+    {
+        HexScript hex;
+        do
+        {
+            hex = hexfield[(int)Random.Range(0, vMax), (int)Random.Range(0, wMax)].GetComponent<HexScript>();
+        } while (!hex.available);
+        return hex;
+    }
+    
     public void DeselectAll()
     {
         foreach (GameObject go in hexfield)
