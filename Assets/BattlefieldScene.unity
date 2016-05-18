@@ -392,9 +392,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   limitsMin: {x: 0, y: 0, z: 0}
   limitsMax: {x: 0, y: 0, z: 0}
-  zoomSpeed: 50
-  moveSpeed: 10
-  rotationSpeed: 12
+  zoomSpeed: 75
+  moveSpeed: 15
+  rotationSpeed: 50
+  pointOfView: 50
 --- !u!1 &2146644310
 GameObject:
   m_ObjectHideFlags: 0
