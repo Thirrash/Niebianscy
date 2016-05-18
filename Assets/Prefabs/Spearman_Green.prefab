@@ -1771,6 +1771,7 @@ GameObject:
   - 4: {fileID: 459108}
   - 65: {fileID: 6515602}
   - 114: {fileID: 11497982}
+  - 114: {fileID: 11481414}
   m_Layer: 0
   m_Name: Spearman_Green
   m_TagString: Unit
@@ -6019,6 +6020,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11481414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a9571922f3ffe429e9467874168185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
 --- !u!114 &11497982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6031,6 +6045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitType: Spearman
+  HexPos: {fileID: 0}
   CurrentHP: 20
   AttBonus: 0
   DefBonus: 0

@@ -65,6 +65,8 @@ public class UnitStats : MonoBehaviour
 		}
 	}
 
+    // No need to do it every frame, use fixed update to regenerate values, but preferably only call it with propper function
+    // like with end of turn
 	void Update()
 	{
 		Attack = AttPerHP * CurrentHP + AttBonus;
