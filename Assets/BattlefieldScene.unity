@@ -392,7 +392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   limitsMin: {x: 0, y: 0, z: 0}
   limitsMax: {x: 0, y: 0, z: 0}
-  zoomSpeed: 75
+  zoomSpeed: 100
   moveSpeed: 15
   rotationSpeed: 50
   pointOfView: 50
@@ -451,6 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d730b9a74afaa614292b8a0e10e21d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedUnit: {fileID: 0}
 --- !u!114 &2146644314
 MonoBehaviour:
   m_ObjectHideFlags: 0

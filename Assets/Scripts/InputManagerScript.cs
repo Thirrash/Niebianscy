@@ -47,6 +47,20 @@ public class InputManagerScript : MonoBehaviour {
 			cameraMan.Move (moveX, moveY, moveZ);
 		if (rotation != 0f)
 			cameraMan.Rotate (rotation);
+		
+		//center camera to selected unit
+		if (Input.GetMouseButton (2))
+			cameraMan.CenterToHex (unitMan.selectedUnit.hex);
+
+		//camera movement when mouse on screen edge
+		if (Input.mousePosition.x < (Screen.width / 40))
+			cameraMan.Move (-1f, 0f, 0f);
+		else if (Input.mousePosition.x > (Screen.width - Screen.width / 40))
+			cameraMan.Move (1f, 0f, 0f);
+		if (Input.mousePosition.y < (Screen.height / 40))
+			cameraMan.Move (0f, 0f, -1f);
+		else if (Input.mousePosition.y > (Screen.height - Screen.height / 40))
+			cameraMan.Move (0f, 0f, 1f);
 
         if (Input.GetKeyUp("escape"))
             unitMan.Deselect();

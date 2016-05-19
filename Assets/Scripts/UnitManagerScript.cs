@@ -14,7 +14,7 @@ public class UnitManagerScript : MonoBehaviour {
     List<UnitScript> unitList;
     HexfieldManagerScript hexfieldMan;
     GUIManagerScript GUIMan;
-    UnitScript selectedUnit;
+    public UnitScript selectedUnit;
     HexScript selectedHex;
 
 	void Awake ()
