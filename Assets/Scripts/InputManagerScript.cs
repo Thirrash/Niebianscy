@@ -8,22 +8,28 @@ using System.Collections;
     depending on user actions.
 
     Current usage:
-    wsad, qe, arrows - camera movements
+    wsad, arrows, edge of screen - camera movement
+    qe - camera rotation
+    middle mouse button - center camera to selected unit's hex
+    scroll wheel - camera zoom in/out
     left click - select unit or tile
     space - move (if selected unit is allied and selected tile in range)
     enter - next turn
 
 ***************************************************************/
-public class InputManagerScript : MonoBehaviour {
+public class InputManagerScript : MonoBehaviour 
+{
     BattlefieldCameraScript cameraMan;
     UnitManagerScript unitMan;
 
-	void Start () {
+	void Start () 
+	{
         unitMan = GetComponent<UnitManagerScript>();
 		cameraMan = GameObject.Find ("Battlefield Camera").GetComponent<BattlefieldCameraScript> ();
     }
 
-	void Update () {
+	void Update () 
+	{
 	    if(Input.GetMouseButtonUp(0))
         {
             RaycastHit hitInfo = new RaycastHit();
@@ -48,7 +54,7 @@ public class InputManagerScript : MonoBehaviour {
 		if (rotation != 0f)
 			cameraMan.Rotate (rotation);
 		
-		//center camera to selected unit
+		//center camera to selected unit on Middle Mouse Button click
 		if (Input.GetMouseButton (2))
 			cameraMan.CenterToHex (unitMan.selectedUnit.hex);
 
