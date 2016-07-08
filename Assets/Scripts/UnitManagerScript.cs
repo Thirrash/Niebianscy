@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 
 /***************************************************************
     Script controlling state of all units in game.
@@ -11,6 +12,11 @@ using System.Collections.Generic;
 
 ***************************************************************/
 public class UnitManagerScript : MonoBehaviour {
+    public enum Mode
+    {
+        None, Movement, Attack, Magick
+    };
+    public Mode mode;
     List<UnitScript> unitList;
     HexfieldManagerScript hexfieldMan;
     GUIManagerScript GUIMan;
@@ -19,6 +25,7 @@ public class UnitManagerScript : MonoBehaviour {
 
 	void Awake ()
     {
+        mode = Mode.None;
         hexfieldMan = GetComponent<HexfieldManagerScript>();
         GUIMan = GetComponent<GUIManagerScript>();
         GameObject[] tempUnitList = GameObject.FindGameObjectsWithTag("Unit");
@@ -48,11 +55,11 @@ public class UnitManagerScript : MonoBehaviour {
 
     public void SelectUnit(UnitScript unit)
     {
-        if (unit.allied)
-        {
-            selectedUnit = unit;
-            hexfieldMan.SelectHexRange(selectedUnit.hex, selectedUnit.mobility);
-        }
+        if (unit != selectedUnit)
+            StartNone();
+        unit.hex.highlight(Color.yellow);
+        selectedUnit = unit;
+        GUIMan.refreshUnitData();
     }
 
     public void SelectHex(HexScript hex)
@@ -61,18 +68,10 @@ public class UnitManagerScript : MonoBehaviour {
         // maybe draw pretty path to this tile?
     }
 
-    public string GetGUIData()
-    {
-        if (selectedUnit == null)
-            return "";
-        if (selectedUnit.allied)
-            return "Allied unit!";
-        else
-            return "Enemy unit!";
-    }
-
     public void Move()
     {
+        if (mode != Mode.Movement)
+            return;
         if (selectedUnit != null && selectedHex != null)
         {
             if (selectedHex.Distance(selectedUnit.hex) <= selectedUnit.mobility)
@@ -85,5 +84,63 @@ public class UnitManagerScript : MonoBehaviour {
             else
                 selectedHex = null;
         }
+    }
+
+    void GetMoveRange()
+    {
+        List<HexScript> hexesList = new List<HexScript>();
+        List<int> costsList = new List<int>();
+        HashSet<HexScript> hexesVisited = new HashSet<HexScript>();
+        hexesList.Add(selectedUnit.hex);
+        costsList.Add(0);
+        for (int i = 0; i < hexesList.Count; i++)
+        {
+            HexScript hexCurrent = hexesList[i];
+            int costCurrent = costsList[i];
+
+            if (!hexesVisited.Add(hexCurrent))
+                break;
+            if (costCurrent >= selectedUnit.mobility)
+                continue;
+
+            List<HexScript> adjacentHexes = hexfieldMan.GetHexNeighbours(hexCurrent);
+            for (int j = adjacentHexes.Count - 1; j >= 0; --j)
+                if (hexesVisited.Contains(adjacentHexes[j]))
+                    adjacentHexes.RemoveAt(j);
+
+            foreach (HexScript ah in adjacentHexes)
+            {
+                int costNew = costCurrent + selectedUnit.getMoveCost(hexCurrent, ah);
+                if (hexesList.Contains(ah))
+                {
+                    int costOld = costsList[hexesList.IndexOf(hexCurrent, i)];
+                    if (costNew < costOld)
+                        costsList[hexesList.IndexOf(hexCurrent, i)] = costNew;
+                }
+                else
+                {
+                    hexesList.Add(ah);
+                    costsList.Add(costNew);
+                }
+            }
+
+            foreach (HexScript hex in hexesList)
+                hex.highlight(Color.red);
+        }
+    }
+
+    public void StartNone()
+    {
+        mode = Mode.None;
+        hexfieldMan.DeselectAll();
+    }
+
+    public void StartMovement()
+    {
+        if (!selectedUnit.allied)
+            return;
+        Debug.Log("Starting movement");
+        mode = Mode.Movement;
+        GetMoveRange();
     }
 }

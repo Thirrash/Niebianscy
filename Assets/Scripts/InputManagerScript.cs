@@ -41,11 +41,12 @@ public class InputManagerScript : MonoBehaviour
                     unitMan.SelectHex(hitInfo.transform.gameObject.GetComponent<HexScript>());
             }
         }
+        if (Input.GetButtonDown("MovementMode"))
+            unitMan.StartMovement();
         if (Input.GetKeyUp("space"))
             unitMan.Move();
-
-		//camera input
-		float moveX = Input.GetAxis ("Horizontal");
+        //camera input
+        float moveX = Input.GetAxis ("Horizontal");
 		float moveY = Input.GetAxis ("Mouse ScrollWheel");
 		float moveZ = Input.GetAxis ("Vertical");
 		float rotation = Input.GetAxis ("Rotational");
@@ -59,6 +60,7 @@ public class InputManagerScript : MonoBehaviour
 			cameraMan.CenterToHex (unitMan.selectedUnit.hex);
 
 		//camera movement when mouse on screen edge
+        /*
 		if (Input.mousePosition.x < (Screen.width / 40))
 			cameraMan.Move (-1f, 0f, 0f);
 		else if (Input.mousePosition.x > (Screen.width - Screen.width / 40))
@@ -67,6 +69,7 @@ public class InputManagerScript : MonoBehaviour
 			cameraMan.Move (0f, 0f, -1f);
 		else if (Input.mousePosition.y > (Screen.height - Screen.height / 40))
 			cameraMan.Move (0f, 0f, 1f);
+        */
 
         if (Input.GetKeyUp("escape"))
             unitMan.Deselect();

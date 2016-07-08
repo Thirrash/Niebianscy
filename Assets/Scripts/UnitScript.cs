@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class UnitScript : MonoBehaviour {
-    // TO DO better collider (hexagonal) for units needed
     public HexScript hex;
     public bool allied;
     public int mobility; // remaining moves left, should refresh in each turn
@@ -37,5 +36,10 @@ public class UnitScript : MonoBehaviour {
         ihex.available = false;
         hex = ihex;
         transform.position = hex.GetPosition();
+    }
+
+    public int getMoveCost(HexScript from, HexScript to)
+    {
+        return 1;
     }
 }

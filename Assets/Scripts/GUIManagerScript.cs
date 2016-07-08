@@ -17,6 +17,17 @@ public class GUIManagerScript : MonoBehaviour{
 
 	void OnGUI()
     {
-        canvas.GetComponentInChildren<Text>().text = unitMan.GetGUIData();
+    }
+
+    public void refreshUnitData()
+    {
+        string str = "";
+        if (unitMan.selectedUnit.allied)
+        {
+            str = "Allied unit:\nMove points left: " + unitMan.selectedUnit.mobility.ToString();
+        }
+        else
+            str = "Enemy unit!";
+        canvas.GetComponentInChildren<Text>().text = str;
     }
 }

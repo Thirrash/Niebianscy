@@ -20,10 +20,12 @@ public class HexScript : MonoBehaviour
     public int x, y, z;
     public TerrainType terrain;
     public bool available;
+    public Projector highlighter;
 
     public void highlight(Color c)
     {
-        GetComponent<MeshRenderer>().material.color = c;
+        highlighter.enabled = true;
+        highlighter.material.SetColor("Tint Color", c);
     }
 
     public void Refresh()
@@ -42,6 +44,8 @@ public class HexScript : MonoBehaviour
                 break;
         }
         GetComponent<MeshRenderer>().material.color = c;
+        //GetComponentInChildren<Projector>().enabled = false;
+        highlighter.GetComponent<Projector>().enabled = false;
     }
 
     public void Set(int col, int row, TerrainType ter)
@@ -51,6 +55,7 @@ public class HexScript : MonoBehaviour
         z = -x - y;
         terrain = ter;
         available = true;
+        highlighter = transform.FindChild("HighlightingProjector").gameObject.GetComponent<Projector>();
     }
 
     public Vector3 GetPosition()

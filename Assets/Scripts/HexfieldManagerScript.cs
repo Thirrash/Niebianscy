@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 
 /***************************************************************
@@ -42,6 +43,28 @@ public class HexfieldManagerScript : MonoBehaviour {
             hexfield[v, w].GetComponent<HexScript>().highlight(Color.cyan);
     }
 
+    public void SelectHex(List<HexScript> list)
+    {
+        foreach (HexScript hex in list)
+            SelectHex(hex);
+    }
+
+    public void SelectHex(HexScript hex)
+    {
+        SelectHex(hex.x, hex.y, hex.z);
+    }
+
+    public HexScript GetHex(int x, int y, int z)
+    {
+        int v = x;
+        int w = y + (x - (x % 2)) / 2;
+        if (v >= vMax || w >= wMax)
+            return null;
+        if (v < 0 || w < 0)
+            return null;
+        return hexfield[v, w].GetComponent<HexScript>();
+    }
+
     public void SelectHexRange(HexScript hex, int r)
     {
         for (int dx = -r; dx <= r; dx++)
@@ -80,5 +103,24 @@ public class HexfieldManagerScript : MonoBehaviour {
     public Vector3 GetHexPosition(int x, int y, int z)
     {
         return GetHexPosition(x, y + (x - (x % 2)) / 2);
+    }
+
+    public List<HexScript> GetHexNeighbours(HexScript hex)
+    {
+        return GetHexNeighbours(hex.x, hex.y, hex.z);
+    }
+
+    //boruvka, kruskal, prim,  -> djikstra
+    public List<HexScript> GetHexNeighbours(int x, int y, int z)
+    {
+        List<HexScript> neighbourList = new List<HexScript>();
+        neighbourList.Add(GetHex(x - 1, y + 1, z));
+        neighbourList.Add(GetHex(x - 1, y, z + 1));
+        neighbourList.Add(GetHex(x, y - 1, z + 1));
+        neighbourList.Add(GetHex(x, y + 1, z - 1));
+        neighbourList.Add(GetHex(x + 1, y - 1, z));
+        neighbourList.Add(GetHex(x + 1, y, z - 1));
+        neighbourList.RemoveAll(hex => (hex == null));
+        return neighbourList;
     }
 }
