@@ -13,10 +13,10 @@ public class BattlefieldCameraScript : MonoBehaviour
 	private HexfieldManagerScript HexField;
     public Vector3 limitsMin = new Vector3(0, 0, 0);
     public Vector3 limitsMax = new Vector3(0, 0, 0);
-    public float zoomSpeed = 40;
-    public float moveSpeed = 10;
-    public float rotationSpeed = 50;
-	public float pointOfView = 50;
+    public float zoomSpeed = 40f;
+    public float moveSpeed = 10f;
+    public float rotationSpeed = 50f;
+	public float pointOfView = 90f;
 
 	void Start ()
 	{
@@ -59,7 +59,7 @@ public class BattlefieldCameraScript : MonoBehaviour
 	{
 		//Limits are set dynamically based on current Hexfield width and length
 		//values here comes from practice (empirical solution); it may be necessery to change them later
-		limitsMin.Set (-4.5f, 5f, -4.5f);
+		limitsMin.Set (-4.5f, 1.5f, -4.5f);
 		limitsMax.Set (
 			1.5f * (HexField.vMax + 2), 
 			0.8f * ((HexField.vMax > HexField.wMax) ? HexField.vMax : HexField.wMax),
