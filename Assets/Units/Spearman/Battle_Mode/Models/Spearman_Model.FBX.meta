@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: eea5cf124331db44db82ee82382b8a76
-timeCreated: 1468321816
+guid: 8be9bbd55815ddc4eb8819dd537d0259
+timeCreated: 1468590603
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -78,13 +78,13 @@ ModelImporter:
     4300008: Beard
     4300010: Body
     4300012: Skirt
-    7400000: Idle01
-    7400002: Idle02
-    7400004: RaiseShield
+    7400000: Idle0
+    7400002: Idle1
+    7400004: Lift
     7400006: Defend
     7400008: Attack
     7400010: Move
-    7400012: DropShield
+    7400012: Drop
     9500000: //RootNode
     13700000: Beard
     13700002: Belt
@@ -115,7 +115,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle01
+      name: Idle0
       takeName: Take 001
       firstFrame: 0
       lastFrame: 149
@@ -209,7 +209,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle02
+      name: Idle1
       takeName: Take 001
       firstFrame: 150
       lastFrame: 299
@@ -303,7 +303,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: RaiseShield
+      name: Lift
       takeName: Take 001
       firstFrame: 300
       lastFrame: 400
@@ -679,7 +679,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: DropShield
+      name: Drop
       takeName: Take 001
       firstFrame: 598
       lastFrame: 697
